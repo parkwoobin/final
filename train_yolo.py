@@ -4,12 +4,15 @@ import os
 import json
 from tqdm import tqdm
 
-# YOLOv11 모델 로드
-model = YOLO('yolov11s.pt')  # YOLOv11 모델을 사용합니다.
+# YOLOv11 모델 파일 경로 지정
+model_path = 'C:/ultralytics'  # YOLOv11 모델을 사용합니다.
+
+# YOLO 모델 로드
+model= YOLO(model_path, task='detect')
 
 # COCO 데이터셋 경로 설정
-coco_images_path = 'path/to/coco/images/train2017'
-coco_annotations_path = 'path/to/coco/annotations/instances_train2017.json'
+coco_images_path = 'C:/ultralytics/train2017'
+coco_annotations_path = 'C:/ultralytics/annotations/instances_train2017.json'
 
 # COCO 데이터셋 로드
 with open(coco_annotations_path, 'r') as f:
