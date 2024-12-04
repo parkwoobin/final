@@ -1,6 +1,6 @@
-train: ./dataset/images/train
-val: ./dataset/images/val
-test: ./dataset/test/images
+train: C:/ultralytics/train2017
+val: C:/ultralytics/val2017
+test: C:/ultralytics/test2017
 
 nc: 1
 
