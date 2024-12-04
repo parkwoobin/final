@@ -4,11 +4,8 @@ import os
 import json
 from tqdm import tqdm
 
-# YOLOv11 모델 파일 경로 지정
-model_path = 'C:/ultralytics'  # YOLOv11 모델을 사용합니다.
-
 # YOLO 모델 로드
-model= YOLO(model_path, task='detect')
+model= YOLO('yolov8n.pt', task='detect')
 
 # COCO 데이터셋 경로 설정
 coco_images_path = 'C:/ultralytics/train2017'
@@ -23,6 +20,6 @@ image_files = [os.path.join(coco_images_path, img['file_name']) for img in coco_
 
 
 # 모델 학습
-model.train(data='C:/ultralytics/coco.yaml', epochs=50, batch_size=16)
+model.train(data='C:/Users/rainb/OneDrive/바탕 화면/final/data.yaml', epochs=50, batch=16)
 
 print("모델 학습 완료")
